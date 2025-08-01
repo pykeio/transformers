@@ -40,6 +40,8 @@ jobs:
         working_directory: ~/transformers
         docker:
             - image: huggingface/transformers-quality:dev
+        environment:
+            PATH: .venv/bin:$PATH
         parallelism: 1
         steps:
             - checkout
