@@ -272,7 +272,6 @@ onnx_job = CircleCIJob(
     "onnx",
     docker_image=[{"image":"huggingface/transformers-torch-tf-light"}],
     install_steps=[
-        "uv venv",
         "uv pip install .[testing,sentencepiece,onnxruntime,vision,rjieba]",
     ],
     pytest_options={"k onnx": None},
